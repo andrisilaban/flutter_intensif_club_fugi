@@ -1,11 +1,11 @@
-class ProductDetail {
+class ProductDetailData {
   final String urlImage;
   final String name;
   final int price;
   final double ratting;
   final String desc;
 
-  ProductDetail(
+  ProductDetailData(
       {required this.urlImage,
       required this.name,
       required this.price,
@@ -13,8 +13,8 @@ class ProductDetail {
       required this.desc});
 }
 
-final List<ProductDetail> listProducDetail = [
-  ProductDetail(
+final List<ProductDetailData> listProducDetailData = [
+  ProductDetailData(
       urlImage: 'assets/images/chair.png',
       name: 'Stylish Chair',
       price: 170,
@@ -22,7 +22,7 @@ final List<ProductDetail> listProducDetail = [
       desc: 'Curabitur commodo turpis id placerat mattis. Mauris '
           'euismod arcu id orci fringilla sodales. Proin congue '
           'eleifend ipsum, eleifend porttitor mi ullamcorper.'),
-  ProductDetail(
+  ProductDetailData(
       urlImage: 'assets/images/chair2.png',
       name: 'Modern Table',
       price: 75,
@@ -30,7 +30,7 @@ final List<ProductDetail> listProducDetail = [
       desc: 'Curabitur commodo turpis id placerat mattis. Mauris '
           'euismod arcu id orci fringilla sodales. Proin congue '
           'eleifend ipsum, eleifend porttitor mi ullamcorper.'),
-  ProductDetail(
+  ProductDetailData(
       urlImage: 'assets/images/chair3.png',
       name: 'Wooden Console',
       price: 240,
@@ -38,7 +38,7 @@ final List<ProductDetail> listProducDetail = [
       desc: 'Curabitur commodo turpis id placerat mattis. Mauris '
           'euismod arcu id orci fringilla sodales. Proin congue '
           'eleifend ipsum, eleifend porttitor mi ullamcorper.'),
-  ProductDetail(
+  ProductDetailData(
       urlImage: 'assets/images/chair4.png',
       name: 'Brown Armchair',
       price: 210,

@@ -68,16 +68,8 @@ ThemeData lightTheme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      backgroundColor: accentColor,
+      backgroundColor: tcp,
     ),
-    // style: ButtonStyle(
-    //   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-    //     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-    //   ),
-    //   shape: MaterialStatePropertyAll(
-    //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-    //   backgroundColor: MaterialStatePropertyAll(accentColor),
-    // ),
   ),
   inputDecorationTheme: InputDecorationTheme(
     fillColor: cc,

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_intensif_club_fugi/constant/constants.dart';
 import 'package:flutter_intensif_club_fugi/data/product_category.dart';
 
-import '../data/product_detail.dart';
+import '../data/product_detail_data.dart';
+import 'product_detail.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -84,75 +85,83 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 crossAxisSpacing: 16,
               ),
               shrinkWrap: true,
-              itemCount: listProducDetail.length,
+              itemCount: listProducDetailData.length,
               itemBuilder: (context, index) {
-                var item = listProducDetail[index];
-                return Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            children: [
-                              ClipRRect(
-                                borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    topRight: Radius.circular(20)),
-                                child: Image.asset(
-                                  item.urlImage,
-                                  width: double.infinity,
-                                  height: 163,
-                                  fit: BoxFit.cover,
+                var item = listProducDetailData[index];
+                return InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ProductDetail(),
+                    ));
+                  },
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Stack(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      topRight: Radius.circular(20)),
+                                  child: Image.asset(
+                                    item.urlImage,
+                                    width: double.infinity,
+                                    height: 163,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
-                                child: Card(
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: const Padding(
-                                      padding: EdgeInsets.all(10),
-                                      child: Icon(
-                                        Icons.heart_broken_sharp,
-                                        size: 14,
-                                        color: Colors.red,
-                                      )),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 10, top: 10),
+                                  child: Card(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: const Padding(
+                                        padding: EdgeInsets.all(10),
+                                        child: Icon(
+                                          Icons.heart_broken_sharp,
+                                          size: 14,
+                                          color: Colors.red,
+                                        )),
+                                  ),
                                 ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 14, top: 6, bottom: 5),
+                              child: Text(item.name, style: poppins12),
+                            ),
+                            Row(children: [
+                              const SizedBox(width: 14),
+                              Text(
+                                '\$${item.price}',
+                                style: poppins20Price,
                               ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 14, top: 6, bottom: 5),
-                            child: Text(item.name, style: poppins12),
-                          ),
-                          Row(children: [
-                            const SizedBox(width: 14),
-                            Text(
-                              '\$${item.price}',
-                              style: poppins20Price,
-                            ),
-                            const Spacer(),
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: icc,
-                            ),
-                            const SizedBox(width: 8),
-                            Text(
-                              '${item.ratting}',
-                              style: poppins12Rate,
-                            ),
-                            const SizedBox(width: 18),
-                          ]),
-                          const SizedBox(width: 12),
-                        ],
-                      )),
+                              const Spacer(),
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: icc,
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                '${item.ratting}',
+                                style: poppins12Rate,
+                              ),
+                              const SizedBox(width: 18),
+                            ]),
+                            const SizedBox(width: 12),
+                          ],
+                        )),
+                  ),
                 );
               },
             ),

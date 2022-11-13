@@ -68,6 +68,13 @@ TextStyle poppins12 = TextStyle(
   fontWeight: FontWeight.w500,
   color: tc,
 );
+TextStyle poppins12w300 = TextStyle(
+  height: 1.5,
+  fontSize: 12.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w300,
+  color: tc,
+);
 TextStyle poppins12Rate = TextStyle(
   height: 1.5,
   fontSize: 12.0,
@@ -96,6 +103,13 @@ TextStyle poppins16 = TextStyle(
   fontWeight: FontWeight.w500,
   color: tc,
 );
+TextStyle poppins16White = TextStyle(
+  height: 1.5,
+  fontSize: 16.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w500,
+  color: wc,
+);
 TextStyle poppins16w600 = TextStyle(
   height: 1.5,
   fontSize: 16.0,
@@ -121,7 +135,7 @@ TextStyle poppins20Price = TextStyle(
   height: 1.5,
   fontSize: 20.0,
   fontFamily: 'Poppins',
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w400,
   color: tcp,
 );
 TextStyle poppins22 = TextStyle(
@@ -144,6 +158,13 @@ TextStyle poppins26 = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w500,
   color: tc,
+);
+TextStyle poppins26w400 = TextStyle(
+  height: 1.5,
+  fontSize: 26.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+  color: tcp,
 );
 TextStyle poppins28 = TextStyle(
   height: 1.5,
