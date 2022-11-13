@@ -45,7 +45,7 @@ class ProductDetail extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                     child: const Padding(
                         padding: EdgeInsets.all(10),
-                        child: Icon(Icons.heart_broken_sharp,
+                        child: Icon(Icons.favorite_outline_outlined,
                             size: 14, color: Colors.red)),
                   ),
                   IconButton(
