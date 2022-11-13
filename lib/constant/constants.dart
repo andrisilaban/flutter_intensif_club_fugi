@@ -7,8 +7,16 @@ Color primaryColor = const Color(0xFFF2F2F2);
 Color accentColor = const Color(0xFF6450C8);
 //text color
 Color tc = const Color(0xFF4A4543);
+//text color price
+Color tcp = const Color(0xFF9A9390);
+//text color ratting
+Color tcr = const Color(0xFFBBBBBB);
 //icon color
 Color ic = const Color(0xFF4A4543);
+//icon content color
+Color icc = const Color(0xFFEEA427);
+//white color
+Color wc = const Color(0xFFFFFFFF);
 //card color
 Color cc = const Color(0xFFFFFFFF);
 //second color
@@ -53,9 +61,30 @@ TextStyle poppins10 = TextStyle(
   fontWeight: FontWeight.w500,
   color: tc,
 );
-TextStyle poppins14 = TextStyle(
+TextStyle poppins12 = TextStyle(
   height: 1.5,
   fontSize: 12.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w500,
+  color: tc,
+);
+TextStyle poppins12Rate = TextStyle(
+  height: 1.5,
+  fontSize: 12.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w500,
+  color: tcr,
+);
+TextStyle poppins12White = TextStyle(
+  height: 1.5,
+  fontSize: 12.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w500,
+  color: wc,
+);
+TextStyle poppins14 = TextStyle(
+  height: 1.5,
+  fontSize: 14.0,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w500,
   color: tc,
@@ -87,6 +116,13 @@ TextStyle poppins20 = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w500,
   color: tc,
+);
+TextStyle poppins20Price = TextStyle(
+  height: 1.5,
+  fontSize: 20.0,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w500,
+  color: tcp,
 );
 TextStyle poppins22 = TextStyle(
   height: 1.5,
