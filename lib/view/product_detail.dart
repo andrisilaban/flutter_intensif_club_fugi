@@ -31,13 +31,13 @@ class ProductDetail extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(14.0),
               child: Row(children: [
-                Icon(Icons.arrow_back, color: ic),
-                const Spacer(),
                 InkWell(
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Text('Detail', style: poppins16)),
+                    child: Icon(Icons.arrow_back, color: ic)),
+                const Spacer(),
+                Text('Detail', style: poppins16),
                 const Spacer(),
                 Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Card(
